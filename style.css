@@ -1,0 +1,254 @@
+/* --- 1. Latar Belakang Gradient Utama --- */
+[data-testid="stAppViewContainer"] {
+    background-image: linear-gradient(180deg, #020024 0%, #090979 35%, #00d4ff 100%);
+    color: white;
+}
+
+/* --- 2. Styling Header --- */
+.header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.header-icon {
+    width: 100px;
+    height: auto;
+    margin-right:15px;
+}
+
+.header-text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-title {
+    font-family: 'Arial', sans-serif;
+    font-weight: 800;
+    font-size: 4rem;
+    margin: 0;
+    line-height: 1.1;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.custom-divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+    margin-bottom: 30px;
+}
+
+.main-description {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: white;
+}
+
+/* --- 3. Uploader --- */
+[data-testid="stFileUploader"] {background-color: #1a1a2e; padding: 20px; border-radius: 15px; border: 2px dashed #3f3f5f; text-align: center;}
+[data-testid="stFileUploader"] label { color: white !important; font-weight: bold; font-size: 1.1rem; }
+[data-testid="stFileUploader"] small { color: #a0a0a0 !important; }
+[data-testid="stFileUploader"] button { background-color: #0068c9; color: white; border: none; }
+
+/* --- 4. RESULT BOXES --- */
+.result-container {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.result-row {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.label-col { width: 120px; opacity: 0.9; font-weight: normal; }
+.value-col { flex-grow: 1; font-weight: 700; text-transform: uppercase; }
+
+/* Warna Status */
+.bg-red { background-color: #c62828; }
+.bg-green { background-color: #2e7d32; }
+.bg-blue { background-color: #1565c0; }
+.bg-black { background-color: #000000; border: 1px solid #333; }
+.bg-orange { background-color: #ef6c00; }
+
+.notification-text {
+    color: white; margin-top: 10px; font-size: 0.9rem; line-height: 1.5;
+}
+
+/* --- 5. DONUT CHART --- */
+.confidence-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+.confidence-text { display: flex; flex-direction: column; }
+.confidence-title { font-size: 1rem; opacity: 0.8; margin-bottom: 5px; }
+.confidence-value { font-size: 1.4rem; font-weight: bold; }
+
+/* SVG Container */
+.circular-chart {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.3);
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  animation: progress 1.5s ease-out forwards;
+}
+
+.percentage {
+  fill: #fff;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
+
+@keyframes progress {
+  from { stroke-dasharray: 0 100; }
+}
+
+.stroke-red { stroke: #ff5252; }
+.stroke-green { stroke: #66bb6a; }
+
+/* --- 6. Lain-lain --- */
+[data-testid="stHorizontalBlock"] img {
+    border-radius: 8px; border: 2px solid rgba(255,255,255,0.2);
+}
+[data-testid=stSidebar] {
+    background-image: url("Image/Test.png"); background-size: cover; background-position: center;
+}
+[data-testid="stSidebar"] > div:first-child {
+    background-color: rgba(0, 0, 0, 0.7); 
+}
+[data-testid="stSidebar"] h1, [data-testid="stSidebar"] p, [data-testid="stSidebar"] li  {
+    color: white !important;
+}
+
+/* Target semua tombol di dalam Streamlit */
+[data-testid="stBaseButton-secondary"] {
+    background-color: #00a8cc !important; /* Biru Laut untuk 'How to Use' */
+    color: white !important;
+    border: none !important;
+    border-radius: 25px !important;
+    font-weight: bold !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+[data-testid="stBaseButton-primary"] {
+    background-image: linear-gradient(90deg, #0068c9 0%, #00d4ff 100%) !important; /* Gradient Biru untuk 'Try Now' */
+    color: white !important;
+    border: none !important;
+    border-radius: 25px !important;
+    font-weight: bold !important;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+    transition: transform 0.2s;
+}
+
+[data-testid="stBaseButton-primary"]:hover {
+    transform: scale(1.05); /* Efek membesar sedikit saat hover */
+}
+/* =========================================
+   DASHBOARD / LANDING PAGE STYLES (BARU)
+   ========================================= */
+
+/* dashboard Text Styles */
+.dashboard-title {
+    font-family: 'Arial', sans-serif;
+    font-weight: 800;
+    font-size: 3rem; /* Besar */
+    margin-bottom: 10px;
+    color: white;
+    line-height: 1.2;
+}
+
+.dashboard-slogan {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 3rem;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.dashboard-sub {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #b0c4de;
+    margin-bottom: 30px;
+}
+
+/* Instruction Card (Kotak Putih) */
+.instruction-card {
+    background-color: white;
+    border-radius: 30px; /* Sudut membulat */
+    padding: 40px;
+    margin-top: 50px;
+    color: black; /* Teks di dalam kotak putih harus hitam */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Header di dalam kotak putih */
+.instruction-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.instruction-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: black;
+}
+
+/* Grid Item di dalam kotak putih */
+.step-item {
+    text-align: center;
+    padding: 10px;
+}
+
+.step-icon {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    background-color: #d3d3d3; /* Abu-abu untuk kotak icon */
+    width: 80px;
+    height: 80px;
+    line-height: 80px; /* Vertikal center teks */
+    border-radius: 10px;
+    margin: 0 auto 15px auto; /* Center horizontal */
+    color: #333;
+}
+
+.step-text {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.4;
+}
